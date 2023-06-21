@@ -1,0 +1,95 @@
+@import "node_modules/ol/ol.css";
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --bg-header: #686868;
+  --bg-header-hover: #8EA8C3;
+  --font-color-nav: #f2f2f2;
+  --bg-logo: #23395b;
+  /* Fonts */
+  --font-family-body: Verdana;
+}
+
+/* General */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: var(--font-family-body);
+  font-size: 10px;
+}
+
+/* Cabecera */
+.header-nav {
+  overflow: hidden;
+  background-color: var(--bg-header);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(100, 100, 100, 1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(100, 100, 100, 1);
+  box-shadow: 0px 2px 5px 0px rgba(100, 100, 100, 1);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.header-nav__btn {
+  color: var(--font-color-nav);
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+
+.header-nav__btn:hover {
+  background-color: var(--bg-header-hover);
+  color: black;
+  font-weight: bold;
+} 
+
+.header-nav__logo {
+  /* background-color: var(--bg-logo); */
+  color: white;
+  font-weight: bold;
+  width: 150px;
+}
+
+/* Sidepanel */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidepanel {
+  width: 300px;
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.sidepanel__title {
+  padding: 20px 1px;
+}
+
+/* mapa */
+#map {
+  padding: 3px 3px;
+  height: calc(100vh - 60px);
+  width: 80%;
+}
+
+/* aumento tamaño del botón de zoom a extensión  */
+.ol-zoom-extent button {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.icons8.com%2Fmaterial%2F2x%2Fzoom-to-extents.png&f=1&nofb=1&ipt=091075bd59948615cc602320db2c0a17af1833938a04ea6988e63734f1954887&ipo=images);
+  background-size: 100%;
+}
+
+/* colocar mapa guia */
+.ol-overviewmap {
+  top: auto;
+  bottom: 20px;
+  left: auto;
+  right: 5px;
+}
